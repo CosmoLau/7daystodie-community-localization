@@ -39,7 +39,7 @@ jobs:
       - name: Download output file
         uses: actions/download-artifact@v4
         with:
-          name: output.txt
+          name: output file
  
       - name: Create Release
         id: create_release
