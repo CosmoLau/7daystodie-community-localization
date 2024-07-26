@@ -30,10 +30,10 @@ function generator(gameFilePath: string, communityPath: string): string[][] {
     return result;
 }
 
-const gameFilePath = path.join(process.cwd(), "/public/gamefile/Localization.txt");
-const versionPath = path.join(process.cwd(), "/public/gamefile/version.txt");
-const communityPath = path.join(process.cwd(), "/public/community/Localization.txt");
-const outputPath = path.join(process.cwd(), "/output.txt");
+const gameFilePath = path.join(__dirname, "/public/gamefile/Localization.txt");
+const versionPath = path.join(__dirname, "/public/gamefile/version.txt");
+const communityPath = path.join(__dirname, "/public/community/Localization.txt");
+const outputPath = path.join(__dirname, "/output.txt");
 
 const version = fs.readFileSync(versionPath, 'utf-8');
 const changeContent = generator(gameFilePath, communityPath);
