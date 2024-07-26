@@ -7,19 +7,16 @@ on:
  
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
- 
     steps:
-    - uses: actions/checkout@v2
- 
-    - name: Set up Bun
-      uses: bun-lang/setup-bun@v1
-      with:
-        version: '1'
- 
-    - name: Generate Documentation
-      run: |
-        bun run ./generatort.ts
+      # ...
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+
+      # run any `bun` or `bunx` command
+      - run: bun install
+      - run: bun run ./generator.ts
         
   release:
     needs: build
