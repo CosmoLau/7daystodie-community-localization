@@ -11,6 +11,15 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+
+      - name: Set up Bun
+        uses: bun-lang/setup-bun@v1
+        with:
+          version: '1'
+ 
+      - name: Generate output
+        run: |
+          bun run ./generatort.ts
  
       - name: Create Release Notes
         id: create_release_notes
