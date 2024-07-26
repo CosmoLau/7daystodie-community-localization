@@ -31,3 +31,4 @@ bun run ./generator.ts
 ```
 
 完成后，生成的日志会在根目录下的 `output.txt` 中。
+
